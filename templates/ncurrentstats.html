@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Stats: Raw Numbers</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .button {
+          border: none;
+          color: white;
+          padding: 16px 36px;
+          text-align: center;
+          align-items: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 8px 4px;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+        
+        .button1 {
+          background-color: white;
+          color: black;
+          border: 3px solid #9f00cb;
+        }
+        
+        .button1:hover {
+          background-color: #9f00cb;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Current Stats: Raw Numbers</h1>
+
+    <canvas id="myChart"></canvas>
+    <canvas id="lineChart"></canvas>
+
+    <script>
+        // Data for the chart
+        var data = {
+            labels: ['Muslims', 'Christians', 'Buddhists', 'Hindus', 'Jains'],
+            datasets: [{
+                label: 'Vegetarians',
+                data: [152000000, 240000000, 130000000, 528000000, 322000000],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var lineData = {
+            labels: ['1996', '2000', '2008', '2016', '2024'],
+            datasets: [{
+                label: 'Vegetarians',
+                data: [1743600000, 245760000, 1088000000, 749000000, 1804000000],
+                fill: false,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                type: 'line'
+            }]
+        };
+
+        // Options for the charts
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Get the canvas element
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var ctxLine = document.getElementById('lineChart').getContext('2d');
+
+        // Create the chart
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+        // Create the line chart
+        var lineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: lineData,
+            options: options
+        });
+    </script>
+    <div class="button-container">
+        <a class = "button button1" href="http://127.0.0.1:5000/" class="button">Home</a>
+        <a class = "button button1" href="http://127.0.0.1:5000/currentstats" class="button">Back</a>
+    </div>
+</body>
+</html>

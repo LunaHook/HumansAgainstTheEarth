@@ -1,0 +1,17 @@
+using logging to test variable midway:
+note: presponse is subsituted for variable and response will show in terminal
+    app.logger.info(presponse)
+
+
+mpresponse = main python response
+e/presponse = explination python response
+cnt = continue?
+
+
+
+
+/submit 
+
+
+secondary
+submit
