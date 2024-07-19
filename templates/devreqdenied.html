@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Page</title>
+</head>
+<body>
+
+    <h1>Request Denied! Incorect Password!</h1>
+    
+    <h2 id="countdown">Redirecting in 3</h2>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('countdown').innerText = 'Redirecting in 2';
+            setTimeout(() => {
+                document.getElementById('countdown').innerText = 'Redirecting in 1';
+            }, 1000); // Wait for 1 second before displaying "Redirecting in 1"
+        }, 1000); // Wait for 1 second before displaying "Redirecting in 2"
+    </script>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'http://127.0.0.1:5000/';  // Replace 'https://example.com' with the URL you want to redirect to
+        }, 3000); // Redirect after 3 seconds (3000 milliseconds)
+    </script>
+
+</body>
+</html>

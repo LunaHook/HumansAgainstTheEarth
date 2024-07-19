@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Page</title>
+</head>
+<body>
+
+    <h1>Conclusion Page</h1>
+    <h1>Welcome, Developer!</h1>
+
+    <button onclick="changeValuesAndRedirect()">Reset Stats</button>
+    <button onclick="redirectToLink()">Home</button>
+
+    <script>
+        function redirectToLink() {
+            // Specify the URL you want to redirect the user to
+            var redirectUrl = 'http://127.0.0.1:5000/';
+
+            // Redirect the user to the specified URL
+            window.location.href = redirectUrl;
+        }
+    </script>
+
+
+    <script>
+        function changeValuesAndRedirect() {
+            // Call a function in app.py to change values of variables
+            // For example, you can use AJAX to send a request to the server
+            // and update the variables in app.py
+
+            // Redirect the user to another link
+            window.location.href = 'http://127.0.0.1:5000/'; // Change this URL to the desired destination
+        }
+    </script>
+
+</html>
